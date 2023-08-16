@@ -13,7 +13,7 @@ class Routers {
   static void configureRoutes(FluroRouter router) {
     // router.notFoundHandler = notFoundHandler;
     router.define(home,
-        handler: Handler(handlerFunc: (_, params) => Homepage()));
+        handler: Handler(handlerFunc: (_, params) => HomePage()));
     router.define(calculator,
         handler: Handler(handlerFunc: (_, params) => CalculatorHome()));
     router.define(email_sender, handler: Handler(handlerFunc: (_, params) {
