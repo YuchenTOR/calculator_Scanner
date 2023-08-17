@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:excel/excel.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       for (var table in excel.tables.keys) {
         for (var row in excel.tables[table]!.rows) {
           setState(() {
-            print(row.toString());
+            print(jsonDecode(row.toString()));
             print('-------------------');
             _output = row.join(' | '); // 这只是一个简单的示例，您可以根据需要进行修改。
           });
